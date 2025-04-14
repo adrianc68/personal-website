@@ -1,0 +1,352 @@
+@use '../../styles/variables.scss' as variables;
+@use '../../styles/mixins.scss' as mixins;
+@use '../../styles/breakpoints.scss' as breakpoints;
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: center;
+  justify-content: center;
+}
+
+.main-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: variables.$spacing-lg;
+}
+
+.welcome {
+  width: 100%;
+  min-height: calc(100vh - variables.$navbar-height);
+  border-left: 1px solid variables.$border-muted;
+  border-right: 1px solid variables.$border-muted;
+  border-bottom: 1px solid variables.$border-muted;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: variables.$spacing-lg;
+
+
+  .w-description {
+    text-align: center;
+
+    h1 {
+      font-size: 48px;
+    }
+
+    span {
+      font-size: 25px;
+    }
+  }
+
+  .w-actions {
+    display: flex;
+    flex-direction: column;
+    gap: variables.$spacing-base;
+
+    .linkedin-button {
+      a {
+        text-decoration: none;
+        color: rgb(3, 147, 227);
+      }
+    }
+
+    .linkedin-icon {
+      height: 20px;
+      width: 20px;
+    }
+  }
+}
+
+.about-me {
+  background-color: red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: variables.$spacing-md;
+  padding: variables.$padding-sm;
+
+
+  .am-img {
+    height: 250px;
+    width: 250px;
+    background-color: blue;
+    order: 2;
+  }
+
+  .am-description {
+    flex: 1;
+    background-color: brown;
+    order: 1;
+    display: flex;
+    flex-direction: column;
+    gap: variables.$spacing-md;
+  }
+}
+
+.programming-languages {
+  background-color: green;
+  display: flex;
+  gap: variables.$spacing-md;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  flex-direction: column;
+  padding: variables.$padding-sm;
+
+  ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: variables.$spacing-lg;
+
+    li {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: variables.$spacing-base;
+    }
+  }
+
+  .language-icon {
+    height: 100px;
+    width: 100px;
+  }
+
+  .pl-description {
+    display: flex;
+    flex-direction: column;
+    gap: variables.$spacing-md;
+    order: 1;
+    flex: 1;
+    background-color: brown;
+  }
+
+  .pl-language-list {
+    display: flex;
+    justify-content: center;
+    width: calc(200px + (variables.$spacing-lg * 2));
+    order: 2;
+  }
+}
+
+.frameworks {
+  background-color: green;
+  display: flex;
+  gap: variables.$spacing-md;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  padding: variables.$padding-sm;
+  flex-direction: column;
+
+  ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: variables.$spacing-lg;
+
+    li {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: variables.$spacing-base;
+    }
+  }
+
+  .fm-icon {
+    height: 100px;
+    width: 100px;
+  }
+
+  .fm-description {
+    display: flex;
+    flex-direction: column;
+    gap: variables.$spacing-md;
+    order: 1;
+    flex: 1;
+    background-color: brown;
+  }
+
+  .fm-list {
+    display: flex;
+    justify-content: center;
+    width: calc(200px + (variables.$spacing-lg * 2));
+    order: 2;
+  }
+}
+
+
+.experience {
+  background-color: blue;
+  display: flex;
+  flex-direction: column;
+  gap: variables.$spacing-md;
+  width: 100%;
+  padding: variables.$padding-sm;
+
+  .exp-description {
+    background-color: green;
+    min-width: 40%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: variables.$spacing-md;
+  }
+
+  .exp-items {
+    background-color: brown;
+    flex-direction: column;
+
+    ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: variables.$spacing-md;
+    }
+
+    .exp-card {
+      padding: variables.$padding-sm;
+      display: flex;
+      flex-direction: column;
+      gap: variables.$spacing-base;
+
+      .ec-title {
+        display: flex;
+        align-items: center;
+        justify-items: center;
+        gap: variables.$spacing-base;
+
+        .ec-business-img {
+          display: flex;
+          justify-items: center;
+          align-items: center;
+        }
+
+        img {
+          height: 40px;
+          width: 40px;
+          border-radius: 50%;
+        }
+      }
+
+      .ect-info {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+
+      }
+    }
+  }
+}
+
+.my-projects {
+  background-color: blue;
+  display:flex;
+  flex-direction: column;
+  gap: variables.$spacing-md;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: variables.$spacing-md;
+    background-color: brown;
+    width: calc(360px + variables.$spacing-md);
+
+  }
+
+  .mp-frame {
+    background-color: yellow;
+    width:180px;
+    height:280px;
+  }
+
+}
+
+@include mixins.respond-to(breakpoints.$breakpoint-md) {
+  .main-content {
+    width: 100%;
+  }
+
+  .welcome {
+    .w-actions {
+      flex-direction: row;
+    }
+  }
+
+  .about-me {
+    width: 80%;
+    flex-direction: row;
+
+    .am-img {
+      order: 1;
+    }
+
+    .am-description {
+      order: 2;
+    }
+  }
+
+  .programming-languages {
+    flex-direction: row;
+    width: 80%;
+
+    .pl-fm-list {
+      width: calc(200px + (variables.$spacing-lg * 2));
+    }
+  }
+
+  .frameworks {
+    flex-direction: row;
+    width: 80%;
+
+    .fm-list {
+      width: calc(200px + (variables.$spacing-lg * 2));
+      order: 1;
+    }
+
+    .fm-description {
+      order: 2;
+    }
+  }
+
+  .experience {
+    flex-direction: row;
+    width: 80%;
+
+    .exp-card {
+
+      max-width: variables.$container-xs;
+    }
+  }
+}
+
+@include mixins.respond-to(breakpoints.$breakpoint-lg) {
+  .programming-languages {
+    flex-direction: row;
+
+    .pl-language-list {
+      width: calc(300px + (variables.$spacing-lg * 2));
+    }
+  }
+
+  .frameworks {
+    flex-direction: row;
+
+    .fm-list {
+      width: calc(300px + (variables.$spacing-lg * 2));
+    }
+  }
+
+
+
+}

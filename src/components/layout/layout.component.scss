@@ -1,0 +1,25 @@
+@use '../../styles/variables.scss' as variables;
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.navbar {
+  height: variables.$navbar-height;
+  width: 100%;
+  position: fixed;
+}
+
+
+.main-container {
+  display: flex;
+  flex: 1;
+  margin-top: variables.$navbar-height;
+}
+
+.content {
+  flex: 1;
+}

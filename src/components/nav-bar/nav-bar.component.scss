@@ -1,0 +1,37 @@
+@use '../../styles/variables.scss';
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: variables.$bg;
+  color: variables.$text;
+  padding: variables.$padding-md;
+  position: sticky;
+  top: 0;
+  height: variables.$navbar-height;
+  z-index: variables.$z-index-top;
+  border-bottom: 1px solid variables.$border;
+}
+
+.navbar-title {
+  font-size: variables.$font-size-xl;
+  font-weight: variables.$font-weight-bold;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: variables.$spacing-base;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links a {
+  color: variables.$text;
+  text-decoration: none;
+}
+
+.navbar-links a:hover {
+  text-decoration: underline;
+}

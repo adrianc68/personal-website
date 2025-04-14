@@ -1,0 +1,51 @@
+@use '../mixins.scss' as mixins;
+@use '../breakpoints.scss' as breakpoints;
+@use '../variables.scss' as variables;
+
+.button {
+  border-radius: variables.$border-radius-sm;
+  background-color: variables.$bg-brand;
+  color: variables.$text-inverted;
+  padding: variables.$padding-sm;
+  cursor: pointer;
+  border: none;
+  width: 100%;
+  max-height: variables.$button-size-base;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: variables.$spacing-base;
+  font-size: variables.$font-size-base;
+
+  .button-icon {
+    font-size: variables.$font-size-xl;
+  }
+}
+
+.button.primary {
+  background-color: variables.$bg-brand;
+  color: variables.$text-inverted;
+  transition: background-color 0.3 ease-in, color 0.3s ease-in;
+}
+
+.button.secondary {
+  background-color: transparent;
+  color: variables.$text-muted;
+
+}
+
+.button.icon {
+  background-color: transparent;
+  border: 0;
+}
+
+.button.bordered {
+  background-color: transparent;
+  border: 1px solid variables.$border;
+  color: variables.$text;
+
+  &:hover {
+    border: 1px solid variables.$border-emphasis;
+    color: variables.$text-emphasis;
+  }
+}
