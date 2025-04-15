@@ -1,6 +1,5 @@
 <div class="container">
   <div class="main-content">
-
     <section class="welcome">
       <div class="w-description">
         <h1>Angel Adrian</h1>
@@ -8,13 +7,19 @@
       </div>
       <div class="w-actions">
         <button class="button bordered linkedin-button">
-          <svg stroke="currentColor" fill="rgb(3, 147, 227)" stroke-width="0" viewBox="0 0 448 512"
-            class="linkedin-icon" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z">
-            </path>
-          </svg>
-          <a href="https://www.linkedin.com/in/%C3%A1ngel-adri%C3%A1n-camal-garc%C3%ADa-4058231a3/">LinkedIn</a>
+          <!--<svg stroke="currentColor" fill="rgb(3, 147, 227)" stroke-width="0" viewBox="0 0 448 512"-->
+          <!--  class="linkedin-icon" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">-->
+          <!--  <path-->
+          <!--    d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z">-->
+          <!--  </path>-->
+          <!--</svg>-->
+          <img src="/images/linkedin-original.svg" class="icon-sm" />
+          <a href="https://www.linkedin.com/in/%C3%A1ngel-adri%C3%A1n-camal-garc%C3%ADa-4058231a3/"
+            class="t-no-deco">LinkedIn</a>
+        </button>
+        <button class="button bordered">
+          <img src="/images/github-original.svg" class="icon-sm">
+          <a href="https://github.com/adrianc68" class="t-no-deco">GitHub</a>
         </button>
         <button class="button primary">
           Contactar
@@ -22,9 +27,7 @@
       </div>
     </section>
 
-    <section class="about-me">
-
-
+    <section class="about-me card">
       <div class="am-description">
         <h2>Sobre mí</h2>
         <p>
@@ -46,7 +49,7 @@
       </div>
     </section>
 
-    <section class="programming-languages">
+    <section class="programming-languages card">
       <div class="pl-description">
         <h2>Lenguajes de programación</h2>
         <p>
@@ -69,7 +72,7 @@
           <img src="/images/python-original.svg" class="language-icon">
           <span class="t-emphasis fw-bold">Python</span>
         </li>
-        <li class="language-icon">
+        <li>
           <img src="/images/java-original.svg" class="language-icon">
           <span class="t-emphasis fw-bold">Java</span>
         </li>
@@ -85,28 +88,15 @@
           <img src="/images/csharp-original.svg" class="language-icon">
           <span class="t-emphasis fw-bold">C#</span>
         </li>
-        <li class="language-icon">
+        <li>
           <img src="/images/javascript-original.svg" class="language-icon">
-          <span class="t-emphasis fw-bold">Javascript</span>
+          <span class="t-emphasis fw-bold">JS</span>
         </li>
       </ul>
     </section>
 
-    <section class="frameworks">
-      <div class="fm-description">
-        <h2>Frameworks</h2>
-        <p>
-          El dominio de distintos frameworks me ha permitido acelerar el desarrollo, mantener buenas prácticas y
-          construir aplicaciones escalables.
+    <section class="frameworks card">
 
-        </p>
-
-        <p>
-
-          Uso cada herramienta de forma estratégica, eligiendo la que
-          mejor se adapta al tipo de proyecto y a los objetivos técnicos y funcionales.
-        </p>
-      </div>
 
       <ul class="fm-list">
         <li>
@@ -131,9 +121,24 @@
         </li>
 
       </ul>
+
+      <div class="fm-description">
+        <h2>Frameworks</h2>
+        <p>
+          El dominio de distintos frameworks me ha permitido acelerar el desarrollo, mantener buenas prácticas y
+          construir aplicaciones escalables.
+
+        </p>
+
+        <p>
+
+          Uso cada herramienta de forma estratégica, eligiendo la que
+          mejor se adapta al tipo de proyecto y a los objetivos técnicos y funcionales.
+        </p>
+      </div>
     </section>
 
-    <section class="experience">
+    <section class="experience card">
       <div class="exp-description">
         <h2>Acerca de mi experiencia</h2>
         <p>
@@ -149,7 +154,7 @@
         </p>
 
         <p>
-          He trabajado con metodologías como XP, SCRUM, FDD, ICONIX y en
+          He trabajado con metodologías como ICONIX, FDD, Scrum, XP y en
           Cascada, lo que me ha permitido adaptarme a distintos equipos y contextos, manteniendo siempre el enfoque en
           la calidad, la seguridad y la mejora continua.
 
@@ -242,10 +247,111 @@
 
     <section class="aspirations">
       <h2>Mis aspiraciones</h2>
+      <p>
+        Me interesa seguir creciendo como profesional en diversas áreas de la Ingenieria de Software.
+        Me motiva trabajar en proyectos donde pueda aplicar buenas prácticas, tomar
+        decisiones técnicas justificadas y construir soluciones robustas, escalables y seguras.
+      </p>
+
+
+      <p>
+        A largo plazo, me gustaría participar en la toma de decisiones de diseño de sistemas complejos, contribuir a la
+        definición de estándares de desarrollo dentro de un equipo, y seguir aprendiendo de otros profesionales que
+        compartan el compromiso por hacer buen software.
+      </p>
+
+
+      <span>Roles de interés</span>
+      <ul>
+        <li>Software Engineer</li>
+        <li>Backend Developer</li>
+        <li>Frontend Developer</li>
+        <li>Fullstack Developer</li>
+        <li>DevOps Engineer</li>
+        <li>Software Architect</li>
+        <li>Application Security Engineer</li>
+        <li>Quality Assurance</li>
+        <li>Tester</li>
+        <li>Site Reliability Engineer (SRE)</li>
+        <li>System Integration Engineer</li>
+        <li>Project Manager</li>
+        <li>Security Engineer</li>
+      </ul>
+
     </section>
 
     <section class="knowledge-and-learning">
+
+
       <h2>Recorrido educativo</h2>
+      <ul>
+        <li><strong>Licenciatura en Ingeniería de Software</strong> – Universidad Veracruzana</li>
+        <li><strong>Estudios autodidactas</strong> en:
+          <ul>
+            <li>Arquitectura de software</li>
+            <li>Fundamentos de redes</li>
+            <li>Sistemas operativos</li>
+            <li>Seguridad informática</li>
+          </ul>
+        </li>
+      </ul>
+      <strong>Lectura de libros</strong> sobre ingeniería de software y desarrollo de sistemas, redes y seguridad
+
+      <ul>
+        <li>Object Constraint Language V2.4</li>
+        <li>Dive Into Design Patterns — Alexander Shevts</li>
+        <li>UML Components — John Cheesman, John Daniels</li>
+        <li>Fundamentals of Software Architecture, An Engineering Approach — Mark Richards & Neal Ford</li>
+        <li>Fundamentos de Seguridad en Redes Aplicaciones y Estándares — William Stallings</li>
+        <li>How Linux Works, What Every SuperUser Should Know — Brian Ward</li>
+        <li>Linux Basics For Hackers, Getting Started with Networking, Scripting, And Security in Kali — Occupytheweb
+        </li>
+        <li>Software Architecture In Practice, Third Edition — Len Bass, Paul Clements, Rick Kazman</li>
+        <li>Software Architecture In Practice, Fourth Edition — Len Bass, Paul Clements, Rick Kazman</li>
+        <li>DevOps for Web Development — Mitesh Soni</li>
+        <li>Software Engineering, A Practictioners Approach — Roger S. Pressman</li>
+        <li>Guia de Pruebas OWASP 2008 V3.0 — OWASP Foundation</li>
+        <li>Designing Software Architecture, A Practical Approach — Humberto Cervantes, Rick Kazman</li>
+        <li>The Second Internet Edition, The Linux Command Line, No Starch Press — Adrian Arpidez </li>
+        <li>Lenguaje Ensamblador para PC — Paul A. Carter</li>
+        <li>Administración de datos — Remo Suppi Boldrito</li>
+        <li>Don't Make Me Think — Steve Krug</li>
+        <li>El Kernel — Josep Jorba Esteve</li>
+        <li>Guia de Pruebas 4.0 — OWASP</li>
+        <li>Building Microservices, Designing Fine-Grained Systems — Sam Newman</li>
+        <li>Programación en ensamblador (x86-64) — Miquel Albert Orenga, Gerard Enrique Manonellas</li>
+        <li>Mastering OAuth 2.0 — Charles Bihis</li>
+        <li>The TCP/IP Guide, A comprehensive, illustrated internet protocols reference — Charles M. Kozierok</li>
+        <li>Continuous Delivery, Reliable Software Releases through Build, Test and Deployment Automation —</li>
+        <li>Hacking Exposed, Network Security Secrets & Solutions — Joel SCambray, Stuart McClure</li>
+        <li>The Linux CookBook — Carla Schroder</li>
+        <li>Hacking The Art of Exploitation — Jon Erickson</li>
+        <li>Sistemas Operativos Modernos, Tercera edición — Andrew S. Tanenbaum</li>
+        <li>Microsoft Application Architecture Guide, 2nd Edition — Microsoft</li>
+        <li>Social Engineering, The Science of Human Hacking — Christopher Hadnagy</li>
+        <li>Dive Into Refactoring — Alexander Shvets</li>
+        <li>Redes de Computadoras — Andrew S. Tanenbaum</li>
+        <li>Attacking Network Protocols, A Hacker's Guide to Capture, Analysis and Exploitation — James Forshaw</li>
+      </ul>
+
+
+      <h3>Plataformas técnicas</h3>
+<ul class="list-disc ml-4 text-sm text-gray-700">
+  <li><strong>TryHackMe:</strong> Networking Fundamentals, Pre Security, Red Teaming, entre otros labs prácticos de ciberseguridad ofensiva.</li>
+  <li><strong>Cisco Networking Academy:</strong> Introduction to Networks (CCNA).</li>
+</ul>
+
+<iframe src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=3259148" style='border:none;'></iframe>
+
+
+
+      <span> Cisco </span>
+
+<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="c6362af9-18c1-4829-aae3-6418eb250d36" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+
+
+      <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="c6362af9-18c1-4829-aae3-6418eb250d36" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+
     </section>
   </div>
 </div>

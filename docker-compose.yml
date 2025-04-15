@@ -1,0 +1,8 @@
+services:
+  personal-website:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: persona-website
+    ports:
+      - "4200:81"

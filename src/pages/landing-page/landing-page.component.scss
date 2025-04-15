@@ -49,24 +49,19 @@
 
     .linkedin-button {
       a {
-        text-decoration: none;
         color: rgb(3, 147, 227);
       }
-    }
-
-    .linkedin-icon {
-      height: 20px;
-      width: 20px;
     }
   }
 }
 
 .about-me {
-  background-color: red;
+  // background-color: red;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
+  max-width: variables.$container-xl;
   gap: variables.$spacing-md;
   padding: variables.$padding-sm;
 
@@ -74,13 +69,13 @@
   .am-img {
     height: 250px;
     width: 250px;
-    background-color: blue;
+    // background-color: blue;
     order: 2;
   }
 
   .am-description {
     flex: 1;
-    background-color: brown;
+    // background-color: brown;
     order: 1;
     display: flex;
     flex-direction: column;
@@ -89,14 +84,15 @@
 }
 
 .programming-languages {
-  background-color: green;
+  // background-color: green;
   display: flex;
   gap: variables.$spacing-md;
   justify-content: center;
   width: 100%;
+  max-width: variables.$container-xl;
   align-items: center;
   flex-direction: column;
-  padding: variables.$padding-sm;
+  padding: variables.$padding-md;
 
   ul {
     list-style: none;
@@ -109,12 +105,14 @@
       flex-direction: column;
       align-items: center;
       gap: variables.$spacing-base;
+      width: 80px;
     }
   }
 
   .language-icon {
-    height: 100px;
-    width: 100px;
+    height: 60px;
+    width: 60px;
+    object-fit: contain;
   }
 
   .pl-description {
@@ -123,25 +121,27 @@
     gap: variables.$spacing-md;
     order: 1;
     flex: 1;
-    background-color: brown;
+    // background-color: brown;
   }
 
   .pl-language-list {
     display: flex;
     justify-content: center;
-    width: calc(200px + (variables.$spacing-lg * 2));
+    // background-color: blue;
+    width: calc(160px + (variables.$spacing-lg * 2));
     order: 2;
   }
 }
 
 .frameworks {
-  background-color: green;
+  // background-color: green;
   display: flex;
   gap: variables.$spacing-md;
   justify-content: center;
   width: 100%;
+  max-width: variables.$container-xl;
   align-items: center;
-  padding: variables.$padding-sm;
+  padding: variables.$padding-md;
   flex-direction: column;
 
   ul {
@@ -155,12 +155,13 @@
       flex-direction: column;
       align-items: center;
       gap: variables.$spacing-base;
+      width: 80px;
     }
   }
 
   .fm-icon {
-    height: 100px;
-    width: 100px;
+    height: 60px;
+    width: 60px;
   }
 
   .fm-description {
@@ -169,28 +170,30 @@
     gap: variables.$spacing-md;
     order: 1;
     flex: 1;
-    background-color: brown;
+    // background-color: brown;
   }
 
   .fm-list {
     display: flex;
     justify-content: center;
-    width: calc(200px + (variables.$spacing-lg * 2));
+    // background-color: blue;
+    width: calc(160px + (variables.$spacing-md * 2));
     order: 2;
   }
 }
 
 
 .experience {
-  background-color: blue;
+  // background-color: blue;
   display: flex;
   flex-direction: column;
   gap: variables.$spacing-md;
   width: 100%;
-  padding: variables.$padding-sm;
+  max-width: variables.$container-xl;
+  padding: variables.$padding-md;
 
   .exp-description {
-    background-color: green;
+    // background-color: green;
     min-width: 40%;
     flex: 1;
     display: flex;
@@ -200,7 +203,7 @@
   }
 
   .exp-items {
-    background-color: brown;
+    // background-color: brown;
     flex-direction: column;
 
     ul {
@@ -247,12 +250,13 @@
 
 .my-projects {
   background-color: blue;
-  display:flex;
+  display: flex;
   flex-direction: column;
   gap: variables.$spacing-md;
   justify-content: center;
   align-items: center;
   width: 100%;
+  max-width: variables.$container-xl;
 
   ul {
     list-style: none;
@@ -260,16 +264,26 @@
     flex-wrap: wrap;
     gap: variables.$spacing-md;
     background-color: brown;
-    width: calc(360px + variables.$spacing-md);
+    // width: calc(360px + variables.$spacing-md);
 
   }
 
   .mp-frame {
     background-color: yellow;
-    width:180px;
-    height:280px;
+    width: 250px;
+    height: 280px;
   }
+}
 
+.aspirations {
+  background-color: brown;
+  display: flex;
+  flex-direction: column;
+  gap: variables.$spacing-md;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: variables.$container-xl;
 }
 
 @include mixins.respond-to(breakpoints.$breakpoint-md) {
@@ -278,12 +292,14 @@
   }
 
   .welcome {
+
     .w-actions {
       flex-direction: row;
     }
   }
 
   .about-me {
+    padding: variables.$padding-lg;
     width: 80%;
     flex-direction: row;
 
@@ -298,11 +314,9 @@
 
   .programming-languages {
     flex-direction: row;
+    padding: variables.$padding-lg;
     width: 80%;
 
-    .pl-fm-list {
-      width: calc(200px + (variables.$spacing-lg * 2));
-    }
   }
 
   .frameworks {
@@ -310,7 +324,6 @@
     width: 80%;
 
     .fm-list {
-      width: calc(200px + (variables.$spacing-lg * 2));
       order: 1;
     }
 
@@ -321,6 +334,7 @@
 
   .experience {
     flex-direction: row;
+    padding: variables.$padding-lg;
     width: 80%;
 
     .exp-card {
@@ -328,14 +342,17 @@
       max-width: variables.$container-xs;
     }
   }
+
+  .aspirations {
+    padding: variables.$padding-lg;
+  }
 }
 
 @include mixins.respond-to(breakpoints.$breakpoint-lg) {
-  .programming-languages {
-    flex-direction: row;
 
+  .programming-languages {
     .pl-language-list {
-      width: calc(300px + (variables.$spacing-lg * 2));
+      width: calc(240px + (variables.$spacing-lg * 2));
     }
   }
 
@@ -343,7 +360,7 @@
     flex-direction: row;
 
     .fm-list {
-      width: calc(300px + (variables.$spacing-lg * 2));
+      width: calc(240px + (variables.$spacing-lg * 2));
     }
   }
 
