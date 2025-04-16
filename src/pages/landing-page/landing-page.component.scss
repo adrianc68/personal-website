@@ -20,9 +20,6 @@
 .welcome {
   width: 100%;
   min-height: calc(100vh - variables.$navbar-height);
-  border-left: 1px solid variables.$border-muted;
-  border-right: 1px solid variables.$border-muted;
-  border-bottom: 1px solid variables.$border-muted;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -92,7 +89,7 @@
   max-width: variables.$container-xl;
   align-items: center;
   flex-direction: column;
-  padding: variables.$padding-md;
+  padding: variables.$padding-sm;
 
   ul {
     list-style: none;
@@ -276,7 +273,6 @@
 }
 
 .aspirations {
-  background-color: brown;
   display: flex;
   flex-direction: column;
   gap: variables.$spacing-md;
@@ -284,6 +280,57 @@
   align-items: center;
   width: 100%;
   max-width: variables.$container-xl;
+  padding: variables.$padding-md;
+
+  .as-description {
+    min-width: 40%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: variables.$spacing-md;
+  }
+
+  .as-roles {
+    // background-color: blue;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: variables.$spacing-md;
+
+    ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: variables.$spacing-md;
+      width: calc(240px + (variables.$spacing-md * 2))
+    }
+
+    .as-role {
+      max-width: 120px;
+      // background-color: green;
+      min-width: 120px;
+      width: 120px;
+      min-height: 120px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      gap: variables.$spacing-base;
+      text-align: center;
+    }
+
+    .as-icon {
+      height: 40px;
+      width: 40px;
+      font-size: 40px;
+    }
+
+
+  }
+
 }
 
 @include mixins.respond-to(breakpoints.$breakpoint-md) {
@@ -345,6 +392,13 @@
 
   .aspirations {
     padding: variables.$padding-lg;
+    flex-direction: row;
+
+    .as-roles {
+      ul {
+        width: calc(360px + (variables.$spacing-md * 2))
+      }
+    }
   }
 }
 
