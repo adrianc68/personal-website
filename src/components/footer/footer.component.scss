@@ -2,8 +2,10 @@
 
 .footer-container {
   background-color: variables.$bg-inverted;
+  margin-top: variables.$spacing-lg;
   color: variables.$text-inverted;
   padding: variables.$padding-xl;
+  width: 100%;
 }
 
 .footer-cont {

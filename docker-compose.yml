@@ -3,6 +3,6 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: persona-website
+    container_name: personal-website
     ports:
-      - "4200:81"
+      - "8080:81"

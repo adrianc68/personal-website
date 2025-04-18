@@ -1,4 +1,6 @@
-@use '../../styles/variables.scss';
+@use '../../styles/variables.scss' as variables;
+@use '../../styles/mixins.scss' as mixins;
+@use '../../styles/breakpoints.scss' as breakpoints;
 
 .navbar {
   display: flex;
@@ -12,28 +14,94 @@
   height: variables.$navbar-height;
   z-index: variables.$z-index-top;
   border-bottom: 1px solid variables.$border;
+
+  .navbar-title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .navbar-toggle-button {
+    display: block;
+  }
+
+  .navbar-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background-color: variables.$bg-subtle;
+    height: calc(100vh - variables.$navbar-height);
+    list-style: none;
+    display: none;
+
+    &.open {
+      display: flex;
+    }
+
+    li {
+      height: auto;
+
+      &:not(:last-child) {
+        border-bottom: 1px solid variables.$border;
+      }
+
+      a {
+        height: auto;
+        color: variables.$text;
+        padding: variables.$padding-md;
+        display: block;
+        width: 100%;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 100%;
+    fill: variables.$bg-brand;
+  }
 }
 
-.navbar-title {
-  font-size: variables.$font-size-xl;
-  font-weight: variables.$font-weight-bold;
-}
+@include mixins.respond-to(breakpoints.$breakpoint-lg) {
+  .navbar {
+    justify-content: flex-end;
+    gap: variables.$spacing-md;
 
-.navbar-links {
-  list-style: none;
-  display: flex;
-  gap: variables.$spacing-md;
-  margin: 0;
-  padding: 0;
-  justify-content: center;
-  align-items: center;
-}
+    .navbar-toggle-button {
+      display: none;
+    }
 
-.navbar-links a {
-  color: variables.$text;
-  text-decoration: none;
-}
+    .navbar-links {
+      position: static;
+      display: flex;
+      flex-direction: row;
+      height: auto;
+      background: none;
+      width: auto;
+      gap: variables.$spacing-md;
 
-.navbar-links a:hover {
-  text-decoration: underline;
+      li {
+
+        &:not(:last-child) {
+          border-bottom: none;
+        }
+
+        a {
+          padding: 0;
+        }
+
+      }
+
+    }
+  }
 }

@@ -167,7 +167,6 @@
     gap: variables.$spacing-md;
     order: 1;
     flex: 1;
-    // background-color: brown;
   }
 
   .fm-list {
@@ -252,6 +251,9 @@
   justify-content: center;
   width: 100%;
   text-align: center;
+  align-items: center;
+  overflow: hidden;
+  // background-color: red;
 
   ul {
     list-style: none;
@@ -262,8 +264,10 @@
     scroll-snap-type: x mandatory;
     padding: variables.$padding-md;
     width: 100%;
-    max-width: 100vw;
-    border: 1px solid variables.$border;
+    max-width: 95vw;
+    // background-color: green;
+    // background-color: variables.$bg;
+    // border: 1px solid variables.$border;
   }
 
   .mp-frame {
@@ -420,12 +424,6 @@
       font-size: 50px;
     }
   }
-
-  .platforms-img {
-    width: 150px;
-
-  }
-
 }
 
 @include mixins.respond-to(breakpoints.$breakpoint-md) {
