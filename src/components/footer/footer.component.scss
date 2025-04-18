@@ -1,10 +1,53 @@
 @use '../../styles/variables.scss' as variables;
 
-.footer {
-  background-color: variables.$bg;
-  padding: variables.$padding-md;
+.footer-container {
+  background-color: variables.$bg-inverted;
+  color: variables.$text-inverted;
+  padding: variables.$padding-xl;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: variables.$spacing-md;
+  max-width: 100%;
+}
+
+.footer-section {
+  flex: 1 1 250px;
+}
+
+.footer-section h3 {
+  color: variables.$text-inverted;
+  margin-bottom: variables.$spacing-base;
+}
+
+.footer-section p,
+.footer-section a {
+  padding: variables.$padding-xs;
+  display: flex;
+  align-items: center;
+  color: variables.$text-inverted;
+  text-decoration: none;
+}
+
+.footer-section mat-icon {
+  margin-right: 0.5rem;
+  font-size: 25px;
+  height: 25px;
+  width: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: variables.$text-inverted;
+}
+
+.footer-bottom {
   text-align: center;
-  color: variables.$text;
-  font-size: variables.$font-size-sm;
+  color: variables.$text-inverted;
+  margin-top: 2rem;
+  font-size: 0.85rem;
   border-top: 1px solid variables.$border;
+  padding-top: 1rem;
 }

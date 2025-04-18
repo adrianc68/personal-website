@@ -251,6 +251,7 @@
   gap: variables.$spacing-md;
   justify-content: center;
   width: 100%;
+  text-align: center;
 
   ul {
     list-style: none;
@@ -335,7 +336,7 @@
 .knowledge-and-learning {
   display: flex;
   flex-direction: column;
-  gap: variables.$spacing-md;
+  gap: variables.$spacing-lg;
   justify-content: center;
   align-items: center;
   width: 100%;
