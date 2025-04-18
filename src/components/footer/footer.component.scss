@@ -6,12 +6,20 @@
   padding: variables.$padding-xl;
 }
 
+.footer-cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
 .footer-content {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   gap: variables.$spacing-md;
-  max-width: 100%;
+  max-width: variables.$container-xl;
+  width: 100%;
 }
 
 .footer-section {
@@ -47,7 +55,8 @@
   text-align: center;
   color: variables.$text-inverted;
   margin-top: 2rem;
-  font-size: 0.85rem;
   border-top: 1px solid variables.$border;
   padding-top: 1rem;
+  max-width: variables.$container-xl;
+  width: 100%;
 }
