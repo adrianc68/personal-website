@@ -21,7 +21,7 @@
       </div>
     </section>
 
-    <section class="about-me card">
+    <section class="about-me">
       <div class="am-description">
         <h2>Sobre mí</h2>
         <p>
@@ -93,7 +93,7 @@
       </ul>
     </section>
 
-    <section class="frameworks card">
+    <section class="frameworks">
 
 
       <ul class="fm-list">
@@ -185,62 +185,93 @@
 
     <section class="my-projects">
       <h2>Mis proyectos</h2>
-      <ul>
-        <li>
-          <div class="mp-frame">
-            <div class="mp-img">
-
+      <div class="scroll-wrapper">
+        <ul>
+          <li class="card">
+            <div class="mp-frame">
+              <div class="mp-content">
+                <div class="mp-header">
+                  <mat-icon class="mp-icon">calendar_month</mat-icon>
+                  <h3 class="mp-title">Agenda de citas</h3>
+                </div>
+                <p class="mp-description">Sistema para agendar y gestionar citas con asistentes.</p>
+                <a class="mp-button" href="/" target="_blank">Ver proyecto</a>
+              </div>
             </div>
-            <span class="fs-lg t-emphasis">Agenda de citas</span>
-          </div>
-        </li>
+          </li>
 
-        <li>
-          <div class="mp-frame">
-            <div class="mp-img">
-
+          <li class="card">
+            <div class="mp-frame">
+              <div class="mp-content">
+                <div class="mp-header">
+                  <mat-icon class="mp-icon">diversity_3</mat-icon>
+                  <h3 class="mp-title">UVGram</h3>
+                </div>
+                <p class="mp-description">Red social para compartir fotos, videos y contenido visual</p>
+                <a href="/" target="_blank">
+                  Ver proyecto
+                </a>
+              </div>
             </div>
-            <span class="fs-lg t-emphasis">UVGram</span>
-          </div>
-        </li>
+          </li>
 
-        <li>
-          <div class="mp-frame">
-            <div class="mp-img">
-
+          <li class="card">
+            <div class="mp-frame">
+              <div class="mp-content">
+                <div class="mp-header">
+                  <mat-icon class="mp-icon">translate</mat-icon>
+                  <h3 class="mp-title">Diidxaza</h3>
+                </div>
+                <p class="mp-description">Plataforma de aprendizaje de la lengua zapoteca</p>
+                <a class="mp-button" href="/" target="_blank">Ver proyecto</a>
+              </div>
             </div>
-            <span class="fs-lg t-emphasis">Diidxaza</span>
-          </div>
-        </li>
+          </li>
 
-        <li>
-          <div class="mp-frame">
-            <div class="mp-img">
-
+          <li class="card">
+            <div class="mp-frame">
+              <div class="mp-content">
+                <div class="mp-header">
+                  <mat-icon class="mp-icon">sports_esports</mat-icon>
+                  <h3 class="mp-title">Sistema Basta</h3>
+                </div>
+                <p class="mp-description">Juego multijugador del juego basta con ranking global y salas</p>
+                <a class="mp-button" href="/" target="_blank">Ver proyecto</a>
+              </div>
             </div>
-            <span class="fs-lg t-emphasis">Practicas profesionales</span>
-          </div>
-        </li>
+          </li>
 
-        <li>
-          <div class="mp-frame">
-            <div class="mp-img">
-
+          <li class="card">
+            <div class="mp-frame">
+              <div class="mp-content">
+                <div class="mp-header">
+                  <mat-icon class="mp-icon">folder_managed</mat-icon>
+                  <h3 class="mp-title">Prácticas profesionales</h3>
+                </div>
+                <p class="mp-description">Sistema para gestionar las actividades de los alumnos de prácticas
+                  profesionales</p>
+                <a class="mp-button" href="/" target="_blank">Ver proyecto</a>
+              </div>
             </div>
-            <span class="fs-lg t-emphasis">Evaluación automatizada</span>
-          </div>
-        </li>
+          </li>
 
-        <li>
-          <div class="mp-frame">
-            <div class="mp-img">
-
+          <li class="card">
+            <div class="mp-frame">
+              <div class="mp-content">
+                <div class="mp-header">
+                  <mat-icon class="mp-icon">smart_toy</mat-icon>
+                  <h3 class="mp-title">Evaluación automatizada</h3>
+                </div>
+                <p class="mp-description">Aplicación para responder automaticamente una encuesta específica</p>
+                <a class="mp-button" href="/" target="_blank">Ver proyecto</a>
+              </div>
             </div>
-            <span class="fs-lg t-emphasis">Sistema Basta</span>
-          </div>
-        </li>
+          </li>
+        </ul>
 
-      </ul>
+
+
+      </div>
     </section>
 
 
@@ -390,6 +421,7 @@
           <li>
             <div class="kal-item">
               <div class="kali-img">
+                <mat-icon class="img-icon">school</mat-icon>
               </div>
               <span class="fs-base t-emphasis fw-bold t-center">Universidad Veracruzana</span>
               <p>
@@ -406,6 +438,7 @@
           <li>
             <div class="kal-item">
               <div class="kali-img">
+                <img src="/images/cisco.svg" />
               </div>
               <span class="fs-base t-emphasis fw-bold t-center">Cisco Networking Academy</span>
               <p>Es una plataforma educativa global que ofrece una variedad de cursos en redes y tecnologías de la
@@ -421,6 +454,7 @@
           <li>
             <div class="kal-item">
               <div class="kali-img">
+                <img src="/images/tryhackme.png">
               </div>
               <span class="fs-base t-emphasis fw-bold t-center">TryHackMe</span>
               <p>Es una plataforma interactiva de aprendizaje en ciberseguridad que utilicé para desarrollar y

@@ -1,0 +1,28 @@
+@use '../../styles/variables.scss' as variables;
+
+.not-found {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: variables.$padding-lg;
+  text-align: center;
+  height: calc(90vh - variables.$navbar-height);
+
+  .nf-container {
+    display: flex;
+    flex-direction: column;
+    gap: variables.$spacing-md;
+    max-width: variables.$container-xs;
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  .nf-link {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+  }
+
+}

@@ -122,13 +122,15 @@ span {
   color: variables.$text-inverted;
 }
 
+.t-error {
+  color: variables.$text-error;
+}
+
 // Text
 .t-center {
   text-align: center;
 }
 
-.t-fill {
-}
 
 
 // Utils

@@ -248,32 +248,73 @@
   display: flex;
   flex-direction: column;
   gap: variables.$spacing-md;
-  justify-content: center;
   width: 100%;
+  justify-content: center;
+  overflow-x: auto;
   text-align: center;
   align-items: center;
-  overflow: hidden;
   // background-color: red;
+
+  .scroll-wrapper {
+    width: 100%;
+    max-width: 92vw;
+    overflow-x: auto;
+  }
 
   ul {
     list-style: none;
     display: flex;
     flex-direction: row;
-    gap: variables.$spacing-md;
+    gap: variables.$spacing-lg;
+    // background-color: blue;
+    padding-top: variables.$padding-md;
+    padding-bottom: variables.$padding-md;
     overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    padding: variables.$padding-md;
-    width: 100%;
-    max-width: 95vw;
     // background-color: green;
-    // background-color: variables.$bg;
-    // border: 1px solid variables.$border;
+    margin: 0 auto;
   }
 
   .mp-frame {
-    background-color: blue;
     width: 250px;
     height: 280px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding-left: variables.$padding-md;
+    padding-right: variables.$padding-md;
+    padding-top: variables.$padding-md;
+    padding-bottom: variables.$padding-lg;
+    gap: variables.$spacing-base;
+
+    .mp-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: variables.$spacing-md;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    .mp-header {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: variables.$spacing-md;
+    }
+
+    .mp-icon {
+      font-size: 50px;
+      height: 50px;
+      width: 50px;
+    }
+
+    .mp-description {
+      flex: 1;
+    }
   }
 }
 
@@ -373,9 +414,23 @@
       .kali-img {
         height: 150px;
         width: 100%;
-        font-size: 50px;
-        background-color: green;
-        // font-size: 50px;
+        border: 1px solid variables.$border;
+        background-color: variables.$bg-muted;
+        padding: variables.$padding-xl;
+
+        .img-icon {
+          height: 100%;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 70px;
+        }
+
+        img {
+          object-fit: contain;
+
+        }
       }
     }
   }
